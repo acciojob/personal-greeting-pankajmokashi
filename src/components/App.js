@@ -7,15 +7,15 @@ const App = () => {
   let [name, changeName] = useState("")
   function changeHandle(event){
       name = event.target.value
-      changeName(name)
+      changeName("Hello " + name + "!")
   }
   
   return (
     <div>
         {/* Do not remove the main div */}
-        <p>Enter your name:</p>
+        <div>Enter your name:</div>
         <input type="text" onChange={changeHandle}></input>
-        <p>Hello {name}!</p>
+        <p>{name}</p>
     </div>
   )
 }
